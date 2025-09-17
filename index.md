@@ -6,7 +6,7 @@ title: ホーム
 <div class="grid">
 {% for g in "1nen,2nen,3nen" | split: "," %}
   <div>
-    <h3>{% if g == "1nen" %}中1{% elsif g=="2nen" %}中2{% else %}</h3>
+    <h3>{% if g == "1nen" %}中1{% elsif g=="2nen" %}中2{% endif %}</h3>
     <p>
     {% assign subs = site.data.subjects.grades[g] %}
     {% for s in subs %}
