@@ -4,17 +4,22 @@ title: ホーム
 ---
 # 授業資料置き場
 <div class="grid">
-{% for g in "1nen,2nen,3nen" | split: "," %}
   <div>
-    <h3>{% if g == "1nen" %}中1{% elsif g=="2nen" %}中2{% endif %}</h3>
+    <h3>中1</h3>
     <p>
-    {% assign subs = site.data.subjects.grades[g] %}
-    {% for s in subs %}
-      <a href="/{{ g }}/{{ s }}/">{{ site.data.subjects.labels[s] }}</a>
-    {% endfor %}
+      <a href="/1nen/数学1/">数学1</a>
+      <a href="/1nen/数学2/">数学2</a>
     </p>
   </div>
-{% endfor %}
+
+  <div>
+    <h3>中2</h3>
+    <p>
+      <a href="/2nen/数学1/">数学1</a>
+      <a href="/2nen/数学2/">数学2</a>
+    </p>
+  </div>
+
 </div>
 
 サイト準備中。
